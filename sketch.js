@@ -4,9 +4,6 @@ let click1 = 0;
 let click2 = 0;
 let load1 = false;
 let load2 = false;
-let rectWidh = 225;
-let rectHeight = 72;
-let x = widh/2 - rectWidh/2;
 function setup() {
     createCanvas(windowWidth, windowHeight);
     frameRate(30);
@@ -35,29 +32,29 @@ function draw() {
     }else{
         fill(255);
     }
-        rect(x, height / 2 - 20, rectWidth, rectHeight);
+        rect(75,316,225,72);
         fill(click1 == 1? 255:color(0,0,255));
         textSize(28);
         textAlign(CENTER);
-        text("frieren op1",width / 2, height / 2 + 25);
+        text("frieren op1",191,365);
     
     if (click2 == 1) {
         fill(65, 105, 225);
     }else{
         fill(255);
     }
-        rect(x, height / 2 + 100, rectWidth, rectHeight);
+        rect(75,424,225,72);
         fill(click2 == 1? 255:color(0,0,255));
         textSize(28);
         textAlign(CENTER);
-        text("kusuriya op2", width / 2, height / 2 + 145);
+        text("kusuriya op2",191,470);
     
 }
 function mouseClicked() {
-    if (mouseX >= x && 
-        mouseX <= x + rectWidth && 
-        mouseY >= height / 2 - 20 && 
-        mouseY <= height / 2 - 20 + rectHeight ) {
+    if (mouseX >= 75 && 
+        mouseX <= 300 && 
+        mouseY >= 316 && 
+        mouseY <= 388 ) {
       click1 = 1 - click1;
       if(click1 == 1){
         file1.play();
@@ -65,10 +62,10 @@ function mouseClicked() {
         file1.pause();
       }
     }
-    if (mouseX >= x &&
-        mouseX <= x + rectWidth &&
-        mouseY >= height / 2 + 100 &&
-        mouseY <= height / 2 + 100 + rectHeight){
+    if (mouseX >= 75 &&
+        mouseX <= 300 &&
+        mouseY >= 424 &&
+        mouseY <= 496){
       click2 = 1 - click2;
       if(click2 == 1){
         file2.play();
