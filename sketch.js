@@ -6,6 +6,7 @@ let click1 = 0;
 let click2 = 0;
 let load1 = false;
 let load2 = false;
+let btn1,btn2;
 function setup() {
     createCanvas(windowWidth, windowHeight);
     frameRate(30);
@@ -17,7 +18,10 @@ function setup() {
       console.log("file2 loaded");
       load2 = true;
     });
-    
+    btn1 = createButton("曲を再生"); 
+    btn1.class("center-btn"); 
+    btn2 = createButton("別の曲"); 
+    btn2.class("center-btn");
 }
 
 function draw() {
