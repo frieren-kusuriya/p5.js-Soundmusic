@@ -19,9 +19,9 @@ function setup() {
       load2 = true;
     });
     btn1 = createButton("曲を再生"); 
-    btn1.class("center-btn"); 
+    btn1.position(width/2 - 100, height/2 + 50); 
     btn2 = createButton("別の曲"); 
-    btn2.class("center-btn");
+    btn2.position(width/2 - 100, height/2 + 120);
 }
 
 function draw() {
