@@ -15,8 +15,4 @@ button {
   margin: 10px; 
   font-size: 18px; 
 }
-.center-btn { 
-  display: block;
-  margin: 10px auto; /* 自動で中央寄せ */
-  font-size: 18px; 
-}
+
