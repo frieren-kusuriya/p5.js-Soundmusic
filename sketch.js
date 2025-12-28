@@ -7,7 +7,7 @@ let click2 = 0;
 let load1 = false;
 let load2 = false;
 function setup() {
-    createCanvas(375, 792);
+    createCanvas(windowWidth, windowHeight);
     frameRate(30);
     file1 = loadSound("frieren_op1.mp3",() => {
       console.log("file1 loaded");
@@ -17,6 +17,7 @@ function setup() {
       console.log("file2 loaded");
       load2 = true;
     });
+    
 }
 
 function draw() {
@@ -76,4 +77,7 @@ function mouseClicked() {
         file2.pause();
       }
     }
+}
+function windowResized() {
+    resizeCanvas(windowWidth, windowHeight); 
 }
